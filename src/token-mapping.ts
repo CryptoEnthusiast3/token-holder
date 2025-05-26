@@ -54,9 +54,6 @@ export function handleTransfer(event: Transfer): void {
   let currentTimestamp = event.block.timestamp;
   let secondsInDay = BigInt.fromI32(86400);
   let dayTimestamp = currentTimestamp.div(secondsInDay).times(secondsInDay);
-
-
-
   
   // Create or update a snapshot for the specific token and day
   let snapshotId = tokenAddress.toHex() + '-' + dayTimestamp.toString(); // Unique by token and timestamp
