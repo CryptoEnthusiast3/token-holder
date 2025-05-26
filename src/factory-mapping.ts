@@ -11,7 +11,6 @@ export function handlePairCreated(event: PairCreated): void {
   let tokenPair = new TokenPair(pairAddress.toHex());
   tokenPair.token0 = token0;
   tokenPair.token1 = token1;
-  tokenPair.token2 = token2;
   tokenPair.pairAddress = pairAddress;
   tokenPair.save();
 
